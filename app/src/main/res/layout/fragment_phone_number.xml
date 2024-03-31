@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Ui.Fragments.PhoneNumberFragment">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:orientation="vertical"
+          app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:id="@+id/name"
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:layout_margin="8dp"
+              android:hint="@string/mobile_number"
+              app:boxCornerRadiusBottomEnd="15dp"
+              app:boxCornerRadiusBottomStart="15dp"
+              app:boxCornerRadiusTopEnd="15dp"
+              app:boxCornerRadiusTopStart="15dp"
+              app:startIconDrawable="@drawable/phone"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="text" />
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+      </LinearLayout>
+  </LinearLayout>
+
+</FrameLayout>
