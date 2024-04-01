@@ -1,21 +1,45 @@
 package com.shubham.shoppingapp.Ui.Activities
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.shubham.shoppingapp.R
+import com.shubham.shoppingapp.Ui.Fragments.OtpFragment
+import com.shubham.shoppingapp.Ui.Fragments.PhoneNumberFragment
+import com.shubham.shoppingapp.databinding.ActivityRegisterBinding
+
 
 class Register : AppCompatActivity() {
+    lateinit var binding: ActivityRegisterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_register)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+       binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        window.statusBarColor = ContextCompat.getColor(this,R.color.main)
+
+        init()
+    }
+
+    fun init(){
+        loadFragment(PhoneNumberFragment())
+//        binding.backBtn.setOnClickListener {
+//            onBackPressedDispatcher.onBackPressed()
+//        }
+        binding.backBtn.setOnClickListener {
+            loadFragment(OtpFragment())
         }
     }
+
+
+     fun loadFragment(fragment: Fragment?): Boolean {
+        if (fragment != null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, fragment)
+                .commit()
+            return true
+        }
+        return false
+    }
+
 }

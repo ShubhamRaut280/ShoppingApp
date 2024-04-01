@@ -93,6 +93,7 @@
                     app:boxCornerRadiusBottomEnd="15dp"
                     app:boxCornerRadiusBottomStart="15dp"
                     app:boxCornerRadiusTopEnd="15dp"
+                    app:startIconDrawable="@drawable/mail"
                     app:boxCornerRadiusTopStart="15dp"
 
                     >
@@ -143,6 +144,7 @@
                     app:boxCornerRadiusBottomEnd="15dp"
                     app:boxCornerRadiusBottomStart="15dp"
                     app:boxCornerRadiusTopEnd="15dp"
+                    app:startIconDrawable="@drawable/pass"
                     app:boxCornerRadiusTopStart="15dp"
                     app:endIconMode="password_toggle">
 

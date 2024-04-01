@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -45,4 +49,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // otp view
+    implementation("com.github.appsfeature:otp-view:1.0")
+    implementation("com.github.mukeshsolanki.android-otpview-pinview:otpview:3.1.0")
+
+    // circular imageview
+    implementation (libs.circleimageview)
+
+    // charts  and graphs
+//    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation (libs.glide)
 }

@@ -8,26 +8,46 @@
 
   <LinearLayout
       android:layout_width="match_parent"
+      android:layout_marginTop="120dp"
       android:layout_height="match_parent">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_margin="5dp"
+          android:gravity="center_horizontal"
           android:orientation="vertical"
           app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+          <com.google.android.material.textview.MaterialTextView
+              android:id="@+id/materialTextView23"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/lora"
+              android:layout_marginStart="25dp"
+              android:layout_marginEnd="25dp"
+              android:layout_marginBottom="50dp"
+              style="@style/loraStyle"
+              android:text="Verify your phone number"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/main"
+              android:textSize="28sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent" />
 
           <com.google.android.material.textfield.TextInputLayout
               android:id="@+id/name"
               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
               android:layout_width="match_parent"
               android:layout_height="60dp"
-              android:layout_margin="8dp"
+              android:layout_margin="10dp"
               android:hint="@string/mobile_number"
               app:boxCornerRadiusBottomEnd="15dp"
               app:boxCornerRadiusBottomStart="15dp"
               app:boxCornerRadiusTopEnd="15dp"
               app:boxCornerRadiusTopStart="15dp"
-              app:startIconDrawable="@drawable/phone"
+              app:startIconDrawable="@drawable/miniphone"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toTopOf="parent">
@@ -38,6 +58,26 @@
                   android:inputType="text" />
 
           </com.google.android.material.textfield.TextInputLayout>
+
+
+          <com.google.android.material.button.MaterialButton
+              android:id="@+id/getOtp"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginEnd="15dp"
+              android:fontFamily="@font/popins"
+              android:gravity="center"
+              android:includeFontPadding="false"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+              android:text="GET OTP"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:cornerRadius="12dp"
+              app:layout_constraintTop_toBottomOf="@+id/forgotPass"
+              tools:layout_editor_absoluteX="25dp" />
 
       </LinearLayout>
   </LinearLayout>
