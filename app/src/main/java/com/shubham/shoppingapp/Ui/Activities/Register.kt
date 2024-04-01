@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import com.shubham.shoppingapp.R
 import com.shubham.shoppingapp.Ui.Fragments.OtpFragment
 import com.shubham.shoppingapp.Ui.Fragments.PhoneNumberFragment
@@ -19,6 +21,8 @@ class Register : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this,R.color.main)
 
         init()
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navController = navHostFragment.navController
     }
 
     fun init(){

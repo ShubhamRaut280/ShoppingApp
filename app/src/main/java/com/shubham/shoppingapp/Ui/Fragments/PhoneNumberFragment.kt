@@ -5,14 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.shubham.shoppingapp.R
+import com.shubham.shoppingapp.Utils.utilFunctions.Companion.showSnackbar
 import com.shubham.shoppingapp.databinding.ActivityRegisterBinding
 import com.shubham.shoppingapp.databinding.FragmentPhoneNumberBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 
 class PhoneNumberFragment : Fragment() {
@@ -30,10 +27,20 @@ class PhoneNumberFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        init()
     }
 
     fun init(){
+        binding.getOtp.setOnClickListener { sendOtp(binding.phone.text.toString())}
+    }
 
+    fun sendOtp (number:String){
+        if(number.length != 10)
+            showSnackbar(requireView(), "Please enter a valid number.")
+        else{
+            showSnackbar(requireView(), "Otp sent successsfully")
+            findNavController().navigate(R.id.action_phoneNumberFragment_to_otpFragment)
+        }
     }
 
 

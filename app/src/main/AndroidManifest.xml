@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ShoppingApp"
         tools:targetApi="31">
         <activity
+            android:name=".Ui.Activities.Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.Activities.NewAccount"
+            android:exported="false" />
+        <activity
             android:name=".Ui.Activities.Register"
             android:exported="false" />
         <activity

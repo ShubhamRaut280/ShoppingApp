@@ -25,6 +25,8 @@ class Login : AppCompatActivity() {
         binding.phone.setOnClickListener {
             startActivity(Intent(this@Login, Register::class.java))
         }
+
+        binding.newacc.setOnClickListener { startActivity(Intent(this@Login, NewAccount::class.java)) }
     }
 
 

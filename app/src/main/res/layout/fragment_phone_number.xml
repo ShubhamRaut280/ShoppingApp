@@ -6,18 +6,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Ui.Fragments.PhoneNumberFragment">
 
+
+
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_marginTop="120dp"
+      android:layout_marginTop="30dp"
       android:layout_height="match_parent">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_margin="5dp"
+          android:layout_marginTop="30dp"
           android:gravity="center_horizontal"
           android:orientation="vertical"
           app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
+          <ImageView
+              android:id="@+id/imageView2"
+              android:layout_width="250dp"
+              android:layout_height="100dp"
+              android:layout_marginTop="30dp"
+              android:src="@drawable/logo"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
           <com.google.android.material.textview.MaterialTextView
               android:id="@+id/materialTextView23"
@@ -26,10 +38,10 @@
               android:fontFamily="@font/lora"
               android:layout_marginStart="25dp"
               android:layout_marginEnd="25dp"
-              android:layout_marginBottom="50dp"
+              android:layout_marginBottom="25dp"
               style="@style/loraStyle"
               android:text="Verify your phone number"
-              android:layout_marginTop="10dp"
+              android:layout_marginTop="30dp"
               android:textColor="@color/main"
               android:textSize="28sp"
               android:textStyle="bold"
@@ -54,8 +66,10 @@
 
               <com.google.android.material.textfield.TextInputEditText
                   android:layout_width="match_parent"
+                  android:id="@+id/phone"
                   android:layout_height="wrap_content"
-                  android:inputType="text" />
+                  android:maxLength="10"
+                  android:inputType="number" />
 
           </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,9 +78,9 @@
               android:id="@+id/getOtp"
               android:layout_width="match_parent"
               android:layout_height="55dp"
-              android:layout_marginStart="15dp"
+              android:layout_marginStart="25dp"
               android:layout_marginTop="10dp"
-              android:layout_marginEnd="15dp"
+              android:layout_marginEnd="25dp"
               android:fontFamily="@font/popins"
               android:gravity="center"
               android:includeFontPadding="false"

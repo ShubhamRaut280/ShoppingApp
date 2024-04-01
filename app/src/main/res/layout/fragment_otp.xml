@@ -10,9 +10,17 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:gravity="center_horizontal"
-      android:layout_marginTop="120dp"
+      android:layout_marginTop="30dp"
       android:orientation="vertical">
-
+      <ImageView
+          android:id="@+id/imageView2"
+          android:layout_width="250dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="30dp"
+          android:src="@drawable/logo"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
 
       <com.google.android.material.textview.MaterialTextView
           android:id="@+id/materialTextView23"
@@ -24,7 +32,7 @@
           android:layout_marginBottom="50dp"
           style="@style/loraStyle"
           android:text="Verify your phone number"
-          android:layout_marginTop="10dp"
+          android:layout_marginTop="40dp"
           android:textColor="@color/main"
           android:textSize="28sp"
           android:textStyle="bold"
