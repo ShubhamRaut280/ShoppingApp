@@ -36,8 +36,10 @@ android {
         jvmTarget = "1.8"
     }
 
-    viewBinding {
-        enable = true
+    buildFeatures {
+        viewBinding  {
+            enable = true
+        }
     }
 }
 
@@ -78,4 +80,10 @@ dependencies {
 
     // Testing Navigation
     androidTestImplementation(libs.androidx.navigation.testing)
+
+
+    // imageview circular
+    implementation(libs.circleimageview)
+
+
 }

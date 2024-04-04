@@ -185,9 +185,9 @@
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="57dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
+                android:layout_margin="15dp"
                 android:id="@+id/createAcc"
                 android:fontFamily="@font/popins"
                 android:includeFontPadding="false"

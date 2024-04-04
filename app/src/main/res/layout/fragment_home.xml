@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Ui.Fragments.DashboardFragments.Home">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/avatar"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:id="@+id/profilePhoto"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profilePhoto"
+                android:id="@+id/nameLayout"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/hello"
+                    android:fontFamily="@font/popins"
+                    android:textColor="@color/darkergrey"
+                    android:textSize="16sp"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/shubham"
+                    android:textStyle="bold"
+                    android:id="@+id/userName"
+                    android:fontFamily="@font/popins"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/theme_for_notification"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/smallsearch"
+            android:drawableTint="@color/darkergrey"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/popins"
+            android:includeFontPadding="false"
+            android:textSize="16sp"
+            android:hint="@string/search_here"
+            android:imeOptions="actionSearch"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"/>
+
+    </LinearLayout>
+
+</FrameLayout>

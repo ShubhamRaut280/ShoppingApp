@@ -9,12 +9,10 @@
 
 
         <FrameLayout
-            android:id="@+id/fragmetContainer"
+            android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="?attr/actionBarSize"
-            android:layout_marginBottom="65dp"
-            app:layout_constraintBottom_toBottomOf="@+id/bottom_nav_for_dashboard"
+            android:layout_marginBottom="?android:actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -26,18 +24,17 @@
             style="@style/BottomNavigationStyle"
             android:layout_width="match_parent"
             android:paddingTop="5dp"
-            android:layout_height="64dp"
-            android:background="@color/white"
-            app:itemIconSize="25dp"
-            app:itemActiveIndicatorStyle="@style/Base.Theme.gmr"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/lightergrey"
+            app:itemIconSize="30dp"
+            app:itemActiveIndicatorStyle="@style/Base.Theme.ShoppingApp"
             app:itemTextColor="@color/bottom_navigation_text_color_selector"
-            app:itemTextAppearanceActive="@dimen/design_bottom_navigation_active_text_size"
-            app:itemTextAppearanceInactive="@dimen/design_bottom_navigation_text_size"
-            app:labelVisibilityMode="labeled"
+            app:labelVisibilityMode="unlabeled"
             app:itemTextAppearanceActiveBoldEnabled="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:menu="@menu/dashboard_menu" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/dashboard_menu" />
+
 
         <!-- Your main content here -->
 

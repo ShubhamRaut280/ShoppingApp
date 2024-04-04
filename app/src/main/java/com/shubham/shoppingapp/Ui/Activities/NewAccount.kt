@@ -11,8 +11,10 @@ import com.shubham.shoppingapp.R
 import com.shubham.shoppingapp.Utils.utilFunctions.Companion.hideProgres
 import com.shubham.shoppingapp.Utils.utilFunctions.Companion.showProgress
 import com.shubham.shoppingapp.databinding.ActivityNewAccountBinding
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -44,15 +46,15 @@ class NewAccount : AppCompatActivity() {
     }
 
     fun createAccount(){
-       GlobalScope.launch {
-           showProgress(binding.pb)
-           delay(2000)
-           hideProgres(binding.pb)
+//       MainScope().launch {
+//           showProgress(binding.pb)
+//           delay(2000)
+//           hideProgres(binding.pb)
 
            startActivity(Intent(this@NewAccount, Dashboard::class.java))
 
 
-       }
+//       }
     }
 
 

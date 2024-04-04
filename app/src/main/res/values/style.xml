@@ -4,5 +4,8 @@
     <style name="loraStyle">
         <item name="android:fontFamily">@font/lora</item>
     </style>
+    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">28dp</item> <!-- Adjust the size as per your requirement -->
+    </style>
 
 </resources>
