@@ -84,6 +84,8 @@ dependencies {
 
     // imageview circular
     implementation(libs.circleimageview)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
 
 
 }

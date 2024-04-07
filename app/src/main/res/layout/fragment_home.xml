@@ -92,6 +92,14 @@
             android:textColor="@android:color/black"
             android:textColorHint="@color/grey"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecycler1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:itemCount="10"
+            tools:listitem="@layout/product_layout_homepage" />
+
     </LinearLayout>
 
 </FrameLayout>
